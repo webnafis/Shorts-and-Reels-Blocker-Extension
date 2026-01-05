@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Shorts & Reels Blocker",
+  "version": "1.0",
+  "permissions": ["storage"],
+  "description": "Removes Shorts and Reels from your feed.",
+  "icons": {
+    "128": "icon.png"
+  },
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.youtube.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ],
+  "options_ui": {
+    "page": "shortsBlocker.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

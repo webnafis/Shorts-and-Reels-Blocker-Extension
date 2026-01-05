@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus & Block Shorts/Reels</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary: #0071e3;
+        --dark: #1d1d1f;
+        --light: #f5f5f7;
+        --glass: rgba(255, 255, 255, 0.7);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Inter", sans-serif;
+      }
+
+      body {
+        background-color: var(--light);
+        color: var(--dark);
+        line-height: 1.6;
+      }
+
+      /* Navbar */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 10%;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        background: var(--glass);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 800;
+      }
+      .nav-links a {
+        text-decoration: none;
+        color: var(--dark);
+        margin-left: 20px;
+        font-weight: 500;
+      }
+
+      /* Hero Section */
+      .hero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 80px 10%;
+        align-items: center;
+        gap: 50px;
+      }
+
+      .hero h1 {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 20px;
+      }
+      .hero h1 span {
+        color: var(--primary);
+      }
+      .hero p {
+        font-size: 1.25rem;
+        color: #6e6e73;
+        margin-bottom: 30px;
+      }
+
+      .badge {
+        background: #e8e8ed;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        display: inline-block;
+      }
+
+      /* Buttons */
+      .btn-primary {
+        background: var(--primary);
+        color: white;
+        padding: 10px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: 0.3s;
+      }
+
+      .btn-primary:hover {
+        background: #0056b3;
+      }
+
+      /* Visual Mockup */
+      .mockup-card {
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        height: 300px;
+        overflow: hidden;
+      }
+
+      .mockup-header {
+        background: #eee;
+        padding: 10px;
+        display: flex;
+        gap: 5px;
+      }
+      .mockup-header span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #ccc;
+      }
+      .mockup-body {
+        padding: 40px;
+        text-align: center;
+      }
+
+      .focus-timer {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #1d1d1f;
+        margin-top: 20px;
+      }
+
+      /* Features */
+      .features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 100px 10%;
+        gap: 30px;
+      }
+
+      .feature-card {
+        background: white;
+        padding: 40px;
+        border-radius: 20px;
+        transition: transform 0.3s;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-10px);
+      }
+
+      @media (max-width: 768px) {
+        .hero {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+        .features {
+          grid-template-columns: 1fr;
+        }
+      }
+      footer p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">Shorts & Reels Blocker</div>
+      <div class="nav-links">Features</div>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-content">
+        <span class="badge">No More Endless Scrolling!!!</span>
+        <h1>Reclaim your <span>Attention.</span></h1>
+        <p>
+          Automatically block YouTube Shorts, Instagram Reels and Facebook
+          Reels. Stop the endless scroll and get back to what matters & Have a
+          Productive Day!.
+        </p>
+        <div class="cta-group">
+          <span class="btn-primary"> Thanks For adding this Extension!!! </span>
+          <span class="trust-text">Joined 21% Productive People!!!</span>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="mockup-card">
+          <div class="mockup-header">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup-body">
+            <p class="blocked-msg">⚠️ Shorts & Reels are currently hidden.</p>
+            <div class="focus-timer">Attention Shield Activated!</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="features" class="features">
+      <div class="feature-card">
+        <h3>⚡ Smart Blocking</h3>
+        <p>
+          Identifies Shorts and Reels sections instantly and hides them before
+          they catch your eye.
+        </p>
+      </div>
+      <div class="feature-card">
+        <h3>🔒 Privacy First</h3>
+        <p>
+          We block the distractions, don't your data. Your browsing history
+          never leaves your device.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h4 style="text-align: center" class="center">
+        <a
+          href="https://nafis-shahriar.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Made by NSA</a
+        >.
+      </h4>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2026 Shorts & Reels Blocker Extension. Built for a deeper web.
+      </p>
+    </footer>
+  </body>
+</html>

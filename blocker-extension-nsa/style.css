@@ -1,0 +1,85 @@
+--- YOUTUBE BLOCKING ---
+
+/* 1. Blocks the Shorts 'shelf' in search results and homepage */
+/* This uses the :has selector to find shelves containing Shorts links */
+ytd-rich-shelf-renderer:has(a[href*="/shorts/"]),
+grid-shelf-view-model:has(a[href*="/shorts/"]),
+ytd-reel-shelf-renderer {
+  display: none !important;
+}
+
+/* 2. Blocks the Shorts button in the left sidebar guide */
+ytd-guide-entry-renderer:has(a[title="Shorts"]),
+ytd-mini-guide-entry-renderer[aria-label="Shorts"] {
+  display: none !important;
+}
+
+/* Removes the Shorts tab from the channel navigation bar */
+yt-tab-shape[tab-title="Shorts"] {
+  display: none !important;
+}
+
+/* Fallback for the wrapper that might still hold the space */
+/* yt-tab-group-shape > div[role="tablist"] > yt-tab-shape:nth-child(3) {
+  display: none !important;
+} */
+
+/* 3. Blocks Hashtag links that lead to Shorts */
+/* This handles the "youtube.com/hashtag/shorts" link */
+a[href*="/shorts"] {
+  display: none !important;
+}
+
+/* Hides Shorts from the 'Related Videos' sidebar */
+ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hides individual Shorts in the home feed and search results */
+ytd-rich-item-renderer:has(a[href*="/shorts/"]),
+ytd-video-renderer:has(a[href*="/shorts/"]),
+ytd-grid-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hides Shorts suggested in the 'Up Next' sidebar while watching a video */
+ytd-compact-video-renderer:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* Hides any 'Reel' or 'Shorts' themed video items */
+ytd-reel-item-renderer,
+ytm-shorts-lockup-view-model-v2,
+ytd-rich-grid-slim-media:has(a[href*="/shorts/"]) {
+  display: none !important;
+}
+
+/* If the URL contains 'shorts', hide the main content area */
+body:has(ytd-reel-video-renderer),
+ytd-shorts,
+#shorts-container {
+  display: none !important;
+  background-color: black !important;
+}
+
+/* --- Facebook BLOCKING --- */
+
+/* 1. Blocks the Reels button in the sidebar */
+a[href*="/reel/"],
+a[href*="/gaming/"],
+/* a[href*="/stories/"], */
+/* a[href*="/reels_tab"], */
+a[href*="/games"],
+li:has(a[href*="/reel/"]),
+li:has(a[href*="/gaming/"])
+/* div[data-pagelet="Stories"]  */ {
+  display: none !important;
+}
+
+/* 2. Blocks Reels in the main feed/explore */
+/* div[aria-label="Reels"], */
+div[data-pagelet="FeedUnit_{n}"]:has(div[aria-label="Reels"]),
+div:has(> video[style*="object-fit: cover"]) {
+  /* Caution: This targets the vertical video format typical of Reels */
+  display: none !important;
+}
