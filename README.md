@@ -12,6 +12,3 @@ We block the distractions, don't your data. Your browsing history never leaves y
 # To see the adding process shortly see this video
 https://youtu.be/WXkbjEHr4xs
 
-# If you feel this helpful? Donate
-### For Bangladeshis, Bkash: 01878913941
-### For Non Bangladeshis, gmail: shahriar.nafis210@gmail.con
